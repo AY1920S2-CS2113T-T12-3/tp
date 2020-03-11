@@ -21,13 +21,12 @@ class EventListTest {
     }
 
     @Test
-    void deleteEvent_invalidIndex_throwException() throws Exception {
+    void deleteEvent_invalidIndex_throwException() {
         try {
             eventList.deleteEvent(2,ui);
-            fail("Illegal delete not found");
-        } catch (Exception exception) {
+        } catch (Exception e) {
             assertEquals("Invalid index entered. Please enter a valid index to be deleted",
-                    exception.getMessage());
+                    e.getMessage());
         }
     }
 

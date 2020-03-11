@@ -22,8 +22,9 @@ public class AddCommand extends Command {
      */
     public AddCommand(String[] eventDetails, boolean isOneWordCommand) throws Exception {
         if (isOneWordCommand) {
-            throw new Exception("Event details isn't provided");
+            throw new Exception("Event details are not provided");
         }
+      
         String[] details = eventDetails[1].split("/");
         String description = details[0];
         String date = details[1].substring(2);

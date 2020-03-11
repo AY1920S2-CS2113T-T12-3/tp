@@ -20,7 +20,7 @@ class ParserTest {
             command = parser.parseCommand("add");
             fail("Empty add command not identified");
         } catch (Exception exception) {
-            assertEquals("Event details isn't provided",exception.getMessage());
+            assertEquals("Event details are not provided",exception.getMessage());
         }
     }
 

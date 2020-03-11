@@ -77,14 +77,19 @@ public class EventList {
      * @param index The index (1-based) of the event to be deleted.
      * @throws Exception If the index specified is invalid.
      */
-    public void deleteEvent(int index, Ui ui) throws Exception {
+    public void deleteEvent(int index, Ui ui) {
+        ui.printLine();
         try {
+            if (index > events.size() | index <= 0) {
+                throw new IndexOutOfBoundsException();
+            }
             events.remove(index - 1);
             ui.printLine();
             ui.printMessage("The event at the mentioned index has been deleted");
             ui.printLine();
         } catch (IndexOutOfBoundsException e) {
-            throw new Exception("Invalid index entered. Please enter a valid index to be deleted");
+            ui.printMessage("Invalid index entered. Please enter a valid index to be deleted");
+            ui.printLine();
         }
 
     }
