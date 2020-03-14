@@ -19,12 +19,13 @@ public class Ui {
 
     public static final String FILE_PATH_EVENTS = "library" + File.separator + "eventList.txt";
     public static final String FILE_PATH_STUDYAREAS = "library" + File.separator + "locations.txt";
+    public static final String FILE_PATH_DICTIONARY = "library" + File.separator + "dictionary.txt";
     public static final String MISSING_STUDY_AREA_DATA = "locations.txt is missing";
     public static final String BYE_COMMAND = "bye";
     public static final String BYE_MESSAGE = "Bye!!!!!!";
     public static final String LINE = "_______________________________________________________________________________"
             + "_____";
-    public static final int MAX_LINE_LENGTH = 55;
+    public static final int MAX_LINE_LENGTH = 58;
     public static final String FLAG = "-";
     public static final String MULTIPLE_WHITE_SPACES = "\\s+";
     public static final String DUPLICATE_FLAGS = "Duplicate flags entered!";

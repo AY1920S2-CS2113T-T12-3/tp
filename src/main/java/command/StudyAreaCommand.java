@@ -4,7 +4,9 @@ import studyarea.IllegalStudyAreaException;
 import studyarea.StudyArea;
 import studyarea.StudyAreaList;
 import ui.Ui;
+
 import java.util.ArrayList;
+
 
 /**
  * This is the StudyAreaCommand class. It executes the StudyArea Search function and interact with Users accordingly.
@@ -65,7 +67,7 @@ public class StudyAreaCommand {
         }
         return true;
     }
-
+    
     /**
      * Executes the StudyArea search feature.
      * @param ui This allows for StudyAreaCommand to interact with Users.

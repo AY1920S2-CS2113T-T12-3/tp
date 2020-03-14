@@ -1,5 +1,6 @@
 package resourceloader;
 
+import studyarea.Dictionary;
 import studyarea.IllegalStudyAreaException;
 import studyarea.StudyArea;
 import ui.Ui;
@@ -23,14 +24,17 @@ public class StudyAreaLoader {
     }
 
     /**
-     * Loads url into file.
-     * @throws IllegalStudyAreaException If study area data file is missing.
+     * Loads content from location.txt and dictionary.txt.
+     * @throws IllegalStudyAreaException if file is not found.
      */
     public void loadFile() throws IllegalStudyAreaException {
         try {
             this.file = new File(this.url);
-        } catch (Exception e) {
+            Dictionary.loadDictionary();
+        }  catch (NullPointerException e) {
             throw new IllegalStudyAreaException(Ui.MISSING_STUDY_AREA_DATA);
+        } catch (FileNotFoundException e) {
+            throw new IllegalStudyAreaException(e.getMessage());
         }
     }
 
@@ -50,7 +54,8 @@ public class StudyAreaLoader {
             String detailsOfLocation = input.nextLine();
             String[] detailsBuffer = detailsOfLocation.split(DIVIDER);
             if (detailsBuffer.length != 6) {
-                throw new IllegalStudyAreaException(Ui.INCONSISTENT_DATA_STORAGE);
+                String name = detailsBuffer[0];
+                throw new IllegalStudyAreaException(Ui.INCONSISTENT_DATA_STORAGE + "at " + name);
             }
             StudyArea studyArea = new StudyArea(detailsBuffer[0], detailsBuffer[1], detailsBuffer[2],
                     Boolean.parseBoolean(detailsBuffer[3]), Boolean.parseBoolean(detailsBuffer[4]),

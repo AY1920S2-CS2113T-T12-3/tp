@@ -14,8 +14,8 @@ ________________________________________________________________________________
 	 Hello James Gosling!
 	 Welcome to OrgaNice! To start, enter "event" to start
 	 your event list! If you are in the mood to mug and you
-	 want to start your study area list, enter "study" !If
-	 you want to exit, enter "bye" !
+	 want to start your study area list, enter "study" !If you
+	 want to exit, enter "bye" !
 ____________________________________________________________________________________
 ____________________________________________________________________________________
 	   Goodbye! Hope to see you again!

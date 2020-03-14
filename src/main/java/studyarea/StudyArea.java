@@ -98,8 +98,9 @@ public class StudyArea {
      * @return String value of all the attributes of the specific StudyArea.
      */
     public String toString() {
-        String text = Ui.TAB + "Name: " + this.name + lineSeparator() + Ui.TAB
-                + "Address: " + this.address + lineSeparator() + Ui.TAB
+        String text = Ui.TAB + "Name: " + this.name + lineSeparator()
+                + Ui.formatMessage("Address: " + this.address, Ui.MAX_LINE_LENGTH)
+                + lineSeparator() + Ui.TAB
                 + "Faculty: " + this.faculty + lineSeparator() + Ui.TAB
                 + "Port: " + this.hasPort + lineSeparator() + Ui.TAB
                 + "Indoor: " + this.isIndoor + lineSeparator() + Ui.TAB
