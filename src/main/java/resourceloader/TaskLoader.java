@@ -14,7 +14,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static seedu.duke.Duke.FILE_PATH_STUDYAREAS;
+import static ui.Constants.FILE_PATH_DICTIONARY;
+import static ui.Constants.FILE_PATH_STUDYAREAS;
 
 
 /**
@@ -134,7 +135,7 @@ public class TaskLoader {
         try {
             Files.createDirectories(fileDirectory);
             Files.createFile(Paths.get(filePath));
-            Files.createFile(Paths.get(FILE_PATH_STUDYAREAS));
+            StudyAreaLoader.createNewStudyAreaData();
         } catch (IOException e) {
             e.printStackTrace();
         }

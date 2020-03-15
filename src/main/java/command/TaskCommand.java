@@ -3,7 +3,8 @@ package command;
 import parser.Parser;
 import task.TaskList;
 import ui.Ui;
-import static ui.Ui.BYE_COMMAND;
+import static ui.Constants.BYE_COMMAND;
+import static ui.Constants.BYE_MESSAGE;
 
 /**
  * Used to run all the functions related to tasks.
@@ -36,7 +37,7 @@ public class TaskCommand {
 
         }
         ui.printLine();
-        ui.printMessage(Ui.BYE_MESSAGE);
+        ui.printMessage(BYE_MESSAGE);
         ui.printLine();
     }
 

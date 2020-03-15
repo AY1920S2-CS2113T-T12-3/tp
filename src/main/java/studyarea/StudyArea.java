@@ -3,6 +3,8 @@ package studyarea;
 import ui.Ui;
 
 import static java.lang.System.lineSeparator;
+import static ui.Constants.MAX_LINE_LENGTH;
+import static ui.Constants.TAB;
 
 
 /**
@@ -98,13 +100,14 @@ public class StudyArea {
      * @return String value of all the attributes of the specific StudyArea.
      */
     public String toString() {
-        String text = Ui.TAB + "Name: " + this.name + lineSeparator() + Ui.TAB
-                + "Address: " + this.address + lineSeparator() + Ui.TAB
-                + "Faculty: " + this.faculty + lineSeparator() + Ui.TAB
-                + "Port: " + this.hasPort + lineSeparator() + Ui.TAB
-                + "Indoor: " + this.isIndoor + lineSeparator() + Ui.TAB
-                + "Average number of Pax: " + this.maxPax;
-        String line = Ui.TAB + "__________________________________________________________";
+        String text = TAB + "Name: " + this.name + lineSeparator()
+                + Ui.formatMessage("Address: " + this.address, MAX_LINE_LENGTH)
+                + lineSeparator() + TAB
+                + "Faculty: " + this.faculty + lineSeparator() + TAB
+                + "Port: " + this.hasPort + lineSeparator() + TAB
+                + "Indoor: " + this.isIndoor + lineSeparator() + TAB
+                + "Maximum number of Pax: " + this.maxPax;
+        String line = TAB + "__________________________________________________________";
         return line + lineSeparator() + text + lineSeparator() + line;
     }
 

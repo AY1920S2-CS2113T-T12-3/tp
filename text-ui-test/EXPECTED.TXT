@@ -9,15 +9,15 @@ ________\///\\\__/\\\_____\/\\\___________/\\_____\\\___/\\\/////\\\___\/\\\__\/
 ____________\///\\\\\/______\/\\\__________\//\\\\\\\\___\//\\\\\\\\/\\_\/\\\___\//\\\\\__\/\\\___\///\\\\\\\\___\//\\\\\\\\\\______/\\\_____
 ______________\/////________\///____________\////////_____\////////\//___\///_____\/////___\///______\////////_____\//////////______\///_____
 What is your name?
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 Hello James Gosling!
-	 Welcome to OrgaNice! To start, enter "task" to start
-	 your task list! If you are in the mood to mug and you
-	 want to start your study area list, enter "study" !If
-	 you want to exit, enter "bye" !
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+	 Welcome to OrgaNice! To start, enter "task" to start your
+	 event list! If you are in the mood to mug and you want to
+	 start your study area list, enter "study" !If you want to
+	 exit, enter "bye" !
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 OrgaNice! Supports the following commands
 	 Please enter the keywords followed by the information shown in the brackets
 	 event <event details> /d <date> /s <start time> /e <end time> /p <priority of event>
@@ -37,72 +37,67 @@ ________________________________________________________________________________
 	 *All dates should follow YYYY-MM-DD format
 	 *All timing should follow 24 hour clock
 	 *There are 4 levels of priority, with 1 being the most urgent, and 4 being the least urgent
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 The list of tasks is cleared.
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
-	 A new event with the following information has been
-	 added.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 A new event with the following information has been added.
 	 [E] meeting at May 5 2020 from 12:00 to 13:00 with
 	 priority 1
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 Here is the list of events added so far:
 	 1) [E] meeting at May 5 2020 from 12:00 to 13:00 with
 	 priority 1
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
-	 A new event with the following information has been
-	 added.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 A new event with the following information has been added.
 	 [D] assignment on May 2 2020 at 14:00 with priority 2
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 Here is the list of tasks added so far displayed in
 	 decreasing order of priority:
-	 1) [D] assignment on May 2 2020 at 14:00 with priority
-	 2
+	 1) [D] assignment on May 2 2020 at 14:00 with priority 2
 	 2) [E] meeting at May 5 2020 from 12:00 to 13:00 with
 	 priority 1
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 Here is the list of events added so far:
-	 1) [D] assignment on May 2 2020 at 14:00 with priority
-	 2
+	 1) [D] assignment on May 2 2020 at 14:00 with priority 2
 	 2) [E] meeting at May 5 2020 from 12:00 to 13:00 with
 	 priority 1
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 The search string entered is empty.
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 Empty Line entered, Please enter a valid line
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 1) [E] meeting at May 5 2020 from 12:00 to 13:00 with
 	 priority 1
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 The list is empty.
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 Invalid index entered. Please enter a valid index to be
 	 deleted
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 Index 1 out of bounds for length 1
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
-	 Enter a valid integer index (1-based) to delete/edit
-	 the corresponding event (format: delete/edit index)
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Enter a valid integer index (1-based) to delete/edit the
+	 corresponding event (format: delete/edit index)
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 Here is the list of events added so far:
-	 1) [D] assignment on May 2 2020 at 14:00 with priority
-	 2
+	 1) [D] assignment on May 2 2020 at 14:00 with priority 2
 	 2) [E] meeting at May 5 2020 from 12:00 to 13:00 with
 	 priority 1
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 The event details are as follows:
 	 [E] meeting at May 5 2020 from 12:00 to 13:00 with
 	 priority 1
@@ -120,20 +115,19 @@ ________________________________________________________________________________
 	 Updated Details:
 	 [E] team meeting at May 5 2020 from 12:00 to 13:00 with
 	 priority 1
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 The task at the mentioned index has been edited
 	 successfully
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 Here is the list of events added so far:
-	 1) [D] assignment on May 2 2020 at 14:00 with priority
-	 2
-	 2) [E] team meeting at May 5 2020 from 12:00 to 13:00
-	 with priority 1
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+	 1) [D] assignment on May 2 2020 at 14:00 with priority 2
+	 2) [E] team meeting at May 5 2020 from 12:00 to 13:00 with
+	 priority 1
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 The event details are as follows:
 	 [E] team meeting at May 5 2020 from 12:00 to 13:00 with
 	 priority 1
@@ -151,36 +145,36 @@ ________________________________________________________________________________
 	 Updated Details:
 	 [E] team meeting at Jun 6 2020 from 12:00 to 13:00 with
 	 priority 1
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 The task at the mentioned index has been edited
 	 successfully
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 Event details are not provided
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 Wrong command used to view events (Should be :view )
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 Invalid command entered, Please enter a valid command
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
-	 Here is the list of tasks with sorted based on the
-	 number of days left:
-	 1) [D] assignment on May 2 2020 at 14:00 with priority
-	 2 ---> 49 day(s) left
-	 2) [E] team meeting at Jun 6 2020 from 12:00 to 13:00
-	 with priority 1 ---> 84 day(s) left
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
-	 Exiting task interface
-________________________________________________________________________________________________________
-	 Please enter "event" to continue with your event list
-	 or "study" to continue with your study area list. To
-	 leave, enter "bye".
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here is the list of tasks with sorted based on the number
+	 of days left:
+	 1) [D] assignment on May 2 2020 at 14:00 with priority 2
+	 ---> 49 day(s) left
+	 2) [E] team meeting at Jun 6 2020 from 12:00 to 13:00 with
+	 priority 1 ---> 84 day(s) left
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Bye!!!!!!
+________________________________________________________________________________________________
+	 Please enter "task" to continue with your event list or
+	 "study" to continue with your study area list. To leave,
+	 enter "bye".
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	 OrgaNice! Supports the following commands
 	 Please enter the keywords followed by the information shown in the brackets
 	 event <event details> /d <date> /s <start time> /e <end time> /p <priority of event>
@@ -200,27 +194,585 @@ ________________________________________________________________________________
 	 *All dates should follow YYYY-MM-DD format
 	 *All timing should follow 24 hour clock
 	 *There are 4 levels of priority, with 1 being the most urgent, and 4 being the least urgent
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
-	 Wrong command used to view countdown of events (Should
-	 be :countdown )
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
-	 Here is the list of tasks with sorted based on the
-	 number of days left:
-	 1) [D] assignment on May 2 2020 at 14:00 with priority
-	 2 ---> 49 day(s) left
-	 2) [E] team meeting at Jun 6 2020 from 12:00 to 13:00
-	 with priority 1 ---> 84 day(s) left
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
-	 Exiting task interface
-________________________________________________________________________________________________________
-	 Please enter "event" to continue with your event list
-	 or "study" to continue with your study area list. To
-	 leave, enter "bye".
-________________________________________________________________________________________________________
-________________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Wrong command used to view countdown of events (Should be
+	 :countdown )
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here is the list of tasks with sorted based on the number
+	 of days left:
+	 1) [D] assignment on May 2 2020 at 14:00 with priority 2
+	 ---> 49 day(s) left
+	 2) [E] team meeting at Jun 6 2020 from 12:00 to 13:00 with
+	 priority 1 ---> 84 day(s) left
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Bye!!!!!!
+________________________________________________________________________________________________
+	 Please enter "task" to continue with your event list or
+	 "study" to continue with your study area list. To leave,
+	 enter "bye".
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Please enter the location for your desired study area.
+	 Enter "help" for a list of supported flags. Flags should
+	 only come after location, if a criteria for location is
+	 entered. When you are done with the search, enter "bye".
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Location entered is empty! Please type a location to
+	 search for StudyAreas!
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here is a list of supported flags!
+	 -p for study areas
+	 with ports
+	 -i for study areas that are indoors
+	 -i for
+	 study areas that are outdoors
+	 -s {size} for maximum
+	 number of pax
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here are the available study areas!
+	 __________________________________________________________
+	 Name: Opposite Town Green (Outside Starbucks)
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Starbucks
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: MacCommons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: PC Commons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Ian and Peony Ferguson Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 3
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: The Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here are the available study areas!
+	 __________________________________________________________
+	 Name: OCBC
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 2
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: SuperSnacks
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here are the available study areas!
+	 __________________________________________________________
+	 Name: Opposite Town Green (Outside Starbucks)
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Starbucks
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Duplicate flags entered!
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Duplicate flags entered!
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here are the available study areas!
+	 __________________________________________________________
+	 Name: MacCommons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: PC Commons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Ian and Peony Ferguson Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 3
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: The Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Town Plaza Seminar Rooms Waiting Area
+	 Address: 2 College Ave West, Town Plaza, Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: SuperSnacks
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 1
+	 Address: 9 Engineering Drive 1,EA, Level 1
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 2
+	 Address: 9 Engineering Drive 1,EA, Level 2
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 3
+	 Address: 9 Engineering Drive 1,EA, Level 3
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 6
+	 Address: 9 Engineering Drive 1,EA, Level 6, EA06-23
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Central Library
+	 Address: Central Library 12 Kent Ridge Crescent
+	 Faculty: -
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: YIH Study Room
+	 Address: Yusof Ishak House, Level 2
+	 Faculty: -
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here are the available study areas!
+	 __________________________________________________________
+	 Name: Opposite Town Green (Outside Starbucks)
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Starbucks
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: MacCommons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: PC Commons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Ian and Peony Ferguson Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 3
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: The Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Town Plaza Seminar Rooms Waiting Area
+	 Address: 2 College Ave West, Town Plaza, Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: OCBC
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 2
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: SuperSnacks
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 1
+	 Address: 9 Engineering Drive 1,EA, Level 1
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 2
+	 Address: 9 Engineering Drive 1,EA, Level 2
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 3
+	 Address: 9 Engineering Drive 1,EA, Level 3
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 4
+	 Address: 9 Engineering Drive 1,EA, Level 4, Outside Staff
+	 Offices
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 6
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 5
+	 Address: 9 Engineering Drive 1,EA, Level 5, Outside of the
+	 door beside EA05
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 6
+	 Address: 9 Engineering Drive 1,EA, Level 6, EA06-23
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Central Library
+	 Address: Central Library 12 Kent Ridge Crescent
+	 Faculty: -
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: YIH Study Room
+	 Address: Yusof Ishak House, Level 2
+	 Faculty: -
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Max Size is not indicated. Please indicate accordingly!
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Argument used after size flag "-s" is not an integer
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Oops! Based on your criteria we were not able to find a
+	 compatible study area!
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here are the available study areas!
+	 __________________________________________________________
+	 Name: Opposite Town Green (Outside Starbucks)
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Starbucks
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: MacCommons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: PC Commons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Ian and Peony Ferguson Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 3
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: The Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Town Plaza Seminar Rooms Waiting Area
+	 Address: 2 College Ave West, Town Plaza, Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: OCBC
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 2
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: SuperSnacks
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 1
+	 Address: 9 Engineering Drive 1,EA, Level 1
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 2
+	 Address: 9 Engineering Drive 1,EA, Level 2
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 3
+	 Address: 9 Engineering Drive 1,EA, Level 3
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 4
+	 Address: 9 Engineering Drive 1,EA, Level 4, Outside Staff
+	 Offices
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 6
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 5
+	 Address: 9 Engineering Drive 1,EA, Level 5, Outside of the
+	 door beside EA05
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 6
+	 Address: 9 Engineering Drive 1,EA, Level 6, EA06-23
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Central Library
+	 Address: Central Library 12 Kent Ridge Crescent
+	 Faculty: -
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: YIH Study Room
+	 Address: Yusof Ishak House, Level 2
+	 Faculty: -
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Please enter the flag along with "-"
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Flags indicated are wrongly used. Please enter "help" for
+	 the supported flags!
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Thank you for using our study area search service!
+________________________________________________________________________________________________
+	 Please enter "task" to continue with your event list or
+	 "study" to continue with your study area list. To leave,
+	 enter "bye".
+________________________________________________________________________________________________
+________________________________________________________________________________________________
 	   Goodbye! Hope to see you again!
 	 ``````````````````````````````````````````````````````````
 	 ````````````````````````````````:v(v'`````````````````````

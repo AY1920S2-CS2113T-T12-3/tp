@@ -9,9 +9,12 @@ import studyarea.IllegalStudyAreaException;
 import studyarea.StudyAreaList;
 import task.TaskList;
 import ui.Ui;
-
 import java.io.File;
 import java.io.FileNotFoundException;
+import static ui.Constants.DAB;
+import static ui.Constants.GOODBYE_MESSAGE;
+import static ui.Constants.INTERMEDIATE_MESSAGE;
+import static ui.Constants.WRONG_INPUT;
 
 
 /**
@@ -59,21 +62,21 @@ public class Duke {
                 break;
             case 1:
                 TaskCommand.runCommands(taskList, ui, parser);
-                ui.printMessage(Ui.INTERMEDIATE_MESSAGE);
+                ui.printMessage(INTERMEDIATE_MESSAGE);
                 break;
             case 2:
                 StudyAreaCommand.runCommands(studyAreaList, ui);
-                ui.printMessage(Ui.INTERMEDIATE_MESSAGE);
+                ui.printMessage(INTERMEDIATE_MESSAGE);
                 break;
             default:
                 ui.printLine();
-                ui.printMessage(Ui.WRONG_INPUT);
+                ui.printMessage(WRONG_INPUT);
                 break;
             }
             ui.printLine();
         }
         taskLoader.saveTasks(taskList.tasks);
-        ui.printMessage(Ui.GOODBYE_MESSAGE + Ui.DAB);
+        ui.printMessage(GOODBYE_MESSAGE + DAB);
         ui.close();
     }
 
