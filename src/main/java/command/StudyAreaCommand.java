@@ -5,6 +5,16 @@ import studyarea.StudyArea;
 import studyarea.StudyAreaList;
 import ui.Ui;
 import java.util.ArrayList;
+import static ui.Constants.AVAILABLE_STUDY_AREAS;
+import static ui.Constants.BYE_COMMAND;
+import static ui.Constants.EMPTY_LIST;
+import static ui.Constants.EMPTY_LOCATION;
+import static ui.Constants.END_MESSAGE;
+import static ui.Constants.FLAGS;
+import static ui.Constants.HELP_COMMAND;
+import static ui.Constants.PROMPT_USER;
+import static ui.Constants.START_STUDY_AREA_SEARCH;
+
 
 /**
  * This is the StudyAreaCommand class. It executes the StudyArea Search function and interact with Users accordingly.
@@ -19,9 +29,9 @@ public class StudyAreaCommand {
      */
     public static void printList(ArrayList<StudyArea> availStudyAreas, Ui ui) {
         if (availStudyAreas.isEmpty()) {
-            ui.printMessage(Ui.EMPTY_LIST);
+            ui.printMessage(EMPTY_LIST);
         } else {
-            ui.printMessage(Ui.AVAILABLE_STUDY_AREAS);
+            ui.printMessage(AVAILABLE_STUDY_AREAS);
             for (StudyArea studyArea : availStudyAreas) {
                 ui.printStudyArea(studyArea);
             }
@@ -43,20 +53,20 @@ public class StudyAreaCommand {
 
         command = command.trim();
         if (command.isBlank()) {
-            throw new IllegalStudyAreaException(Ui.EMPTY_LOCATION);
+            throw new IllegalStudyAreaException(EMPTY_LOCATION);
         } else {
             switch (command) {
-            case Ui.BYE_COMMAND:
-                ui.printMessage(Ui.END_MESSAGE);
+            case BYE_COMMAND:
+                ui.printMessage(END_MESSAGE);
                 return false;
-            case Ui.HELP_COMMAND:
-                ui.printMessage(Ui.FLAGS);
+            case HELP_COMMAND:
+                ui.printMessage(FLAGS);
                 break;
             default:
                 try {
                     ArrayList<StudyArea> availStudyAreas = studyAreaList.searchList(command);
                     printList(availStudyAreas, ui);
-                    ui.printMessage(Ui.PROMPT_USER);
+                    ui.printMessage(PROMPT_USER);
                 } catch (IllegalStudyAreaException e) {
                     ui.printMessage(e.getMessage());
                 }
@@ -65,7 +75,7 @@ public class StudyAreaCommand {
         }
         return true;
     }
-
+    
     /**
      * Executes the StudyArea search feature.
      * @param ui This allows for StudyAreaCommand to interact with Users.
@@ -73,7 +83,7 @@ public class StudyAreaCommand {
      */
     public static void runCommands(StudyAreaList studyAreaList, Ui ui)  {
         ui.printLine();
-        ui.printMessage(Ui.START_STUDY_AREA_SEARCH);
+        ui.printMessage(START_STUDY_AREA_SEARCH);
         boolean status = true;
         while (status) {
             ui.printLine();

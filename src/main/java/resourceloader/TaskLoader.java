@@ -14,8 +14,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static seedu.duke.Duke.FILE_PATH_STUDY_AREAS;
-
 
 /**
  * Handles the task of loading and storing events.
@@ -138,7 +136,7 @@ public class TaskLoader {
         try {
             Files.createDirectories(fileDirectory);
             Files.createFile(Paths.get(filePath));
-            Files.createFile(Paths.get(FILE_PATH_STUDY_AREAS));
+            StudyAreaLoader.createNewStudyAreaData();
         } catch (IOException e) {
             e.printStackTrace();
         }

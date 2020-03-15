@@ -1,20 +1,28 @@
-Mar 15, 2020 1:39:19 AM seedu.duke.Duke run
+Mar 15, 2020 2:52:10 PM seedu.duke.Duke <init>
+SEVERE: Exception encountered when Duke was constructed
+studyarea.IllegalStudyAreaException: library\dictionary.txt (The system cannot find the file specified)
+	at resourceloader.StudyAreaLoader.loadFile(StudyAreaLoader.java:44)
+	at resourceloader.StudyAreaLoader.<init>(StudyAreaLoader.java:30)
+	at seedu.duke.Duke.<init>(Duke.java:61)
+	at seedu.duke.Duke.main(Duke.java:133)
+
+Mar 15, 2020 2:52:10 PM seedu.duke.Duke run
 INFO: Application started Execution
-Mar 15, 2020 1:39:19 AM seedu.duke.Duke run
+Mar 15, 2020 2:52:10 PM seedu.duke.Duke run
 INFO: Application transitioning to task mode
-Mar 15, 2020 1:39:19 AM task.Event getFieldToBeEdited
+Mar 15, 2020 2:52:10 PM task.Event getFieldToBeEdited
 INFO: Invalid option entered by user
-Mar 15, 2020 1:39:19 AM task.Event getFieldToBeEdited
+Mar 15, 2020 2:52:10 PM task.Event getFieldToBeEdited
 INFO: Invalid option entered by user
-Mar 15, 2020 1:39:19 AM task.Event parseDate
+Mar 15, 2020 2:52:10 PM task.Event parseDate
 INFO: Date after current date exception thrown
-Mar 15, 2020 1:39:19 AM task.Event editDate
+Mar 15, 2020 2:52:10 PM task.Event editDate
 INFO: Invalid date entered by user
-Mar 15, 2020 1:39:19 AM task.Deadline getFieldToBeEdited
+Mar 15, 2020 2:52:10 PM task.Deadline getFieldToBeEdited
 INFO: Invalid option entered by user
-Mar 15, 2020 1:39:19 AM seedu.duke.Duke run
+Mar 15, 2020 2:52:10 PM seedu.duke.Duke run
 INFO: Application transitioning to task mode
-Mar 15, 2020 1:39:19 AM seedu.duke.Duke run
+Mar 15, 2020 2:52:10 PM seedu.duke.Duke run
 INFO: Application is going to exit
-Mar 15, 2020 1:39:19 AM seedu.duke.Duke run
+Mar 15, 2020 2:52:10 PM seedu.duke.Duke run
 INFO: Application closed successfully

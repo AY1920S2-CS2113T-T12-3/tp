@@ -2,7 +2,8 @@ package exception.command;
 
 import exception.CustomException;
 
-import static ui.Ui.HELP_DESCRIPTION_5;
+import static ui.Constants.HELP_DESCRIPTION_5;
+
 
 public class DeadlineCreationFormatNotFollowedException extends CustomException {
     public DeadlineCreationFormatNotFollowedException() {

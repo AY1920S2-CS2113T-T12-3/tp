@@ -9,7 +9,6 @@ import studyarea.IllegalStudyAreaException;
 import studyarea.StudyAreaList;
 import task.TaskList;
 import ui.Ui;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -19,6 +18,10 @@ import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+import static ui.Constants.DAB;
+import static ui.Constants.GOODBYE_MESSAGE;
+import static ui.Constants.INTERMEDIATE_MESSAGE;
+import static ui.Constants.WRONG_INPUT;
 
 
 /**
@@ -59,6 +62,7 @@ public class Duke {
             studyAreaList = new StudyAreaList(studyAreaLoader.pushToDatabase());
         } catch (FileNotFoundException | IllegalStudyAreaException e) {
             LOGGER.log(Level.SEVERE, EXCEPTION_ENCOUNTERED_MESSAGE, e);
+            studyAreaList = new StudyAreaList();
             ui.printLine();
             ui.printMessage(e.getMessage());
             ui.printLine();
@@ -99,23 +103,23 @@ public class Duke {
             case 1:
                 LOGGER.log(Level.INFO, TASK_MODE);
                 TaskCommand.runCommands(taskList, ui, parser);
-                ui.printMessage(Ui.INTERMEDIATE_MESSAGE);
+                ui.printMessage(INTERMEDIATE_MESSAGE);
                 break;
             case 2:
                 LOGGER.log(Level.INFO, STUDY_AREA_MODE);
                 StudyAreaCommand.runCommands(studyAreaList, ui);
-                ui.printMessage(Ui.INTERMEDIATE_MESSAGE);
+                ui.printMessage(INTERMEDIATE_MESSAGE);
                 break;
             default:
                 LOGGER.log(Level.INFO, WRONG_COMMAND);
                 ui.printLine();
-                ui.printMessage(Ui.WRONG_INPUT);
+                ui.printMessage(WRONG_INPUT);
                 break;
             }
             ui.printLine();
         }
         taskLoader.saveTasks(taskList.tasks);
-        ui.printMessage(Ui.GOODBYE_MESSAGE + Ui.DAB);
+        ui.printMessage(GOODBYE_MESSAGE + DAB);
         ui.close();
         LOGGER.log(Level.INFO, APPLICATION_CLOSED_SUCCESSFULLY);
     }

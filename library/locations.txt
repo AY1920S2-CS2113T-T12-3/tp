@@ -1,8 +1,17 @@
-MacCommons~2 College Ave West Education Resource Centre~Utown~true~true~5
-OCBC~2 College Ave West, Stephen Riady Centre~Utown~true~false~2
-EA Level 3~9 Engineering Drive 1,EA~Engineering~true~true~4
-EA Level 2~9 Engineering Drive 1~Engineering~true~true~4
-EA Level 1~9 Engineering Drive 1~Engineering~true~true~4
-EA Level 4~9 Engineering Drive 1, Outside Staff Offices~Engineering~true~false~6
-EA Level 5~9 Engineering Drive 1, Outside of the door beside EA05~Engineering~true~false~4
-EA Level 6~9 Engineering Drive 1, EA06-23~Engineering~true~true~4
+Opposite Town Green (Outside Starbucks)~2 College Avenue West Education Resource Centre, Ground Level~Utown~true~false~4
+Starbucks~2 College Avenue West Education Resource Centre, Ground Level~Utown~true~false~5
+MacCommons~2 College Avenue West Education Resource Centre, Level 1~Utown~true~true~5
+PC Commons~2 College Avenue West Education Resource Centre, Level 1~Utown~true~true~5
+Ian and Peony Ferguson Study~2 College Ave West Education Resource Centre, Level 3~Utown~true~true~4
+The Study~2 College Ave West Education Resource Centre, Level 2~Utown~true~true~5
+Town Plaza Seminar Rooms Waiting Area~2 College Ave West, Town Plaza, Level 2~Utown~true~true~4
+OCBC~2 College Ave West, Stephen Riady Centre, Ground Level~Utown~true~false~2
+SuperSnacks~2 College Ave West, Stephen Riady Centre, Ground Level~Utown~true~true~4
+EA Level 1~9 Engineering Drive 1,EA, Level 1~Engineering~true~true~4
+EA Level 2~9 Engineering Drive 1,EA, Level 2~Engineering~true~true~4
+EA Level 3~9 Engineering Drive 1,EA, Level 3~Engineering~true~true~4
+EA Level 4~9 Engineering Drive 1,EA, Level 4, Outside Staff Offices~Engineering~true~false~6
+EA Level 5~9 Engineering Drive 1,EA, Level 5, Outside of the door beside EA05~Engineering~true~false~4
+EA Level 6~9 Engineering Drive 1,EA, Level 6, EA06-23~Engineering~true~true~4
+Central Library~Central Library 12 Kent Ridge Crescent~-~true~true~5
+YIH Study Room~Yusof Ishak House, Level 2~-~true~true~4

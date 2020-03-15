@@ -1,12 +1,20 @@
 package resourceloader;
 
+import studyarea.Dictionary;
 import studyarea.IllegalStudyAreaException;
 import studyarea.StudyArea;
-import ui.Ui;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
+import static ui.Constants.FILE_PATH_DICTIONARY;
+import static ui.Constants.FILE_PATH_STUDYAREAS;
+import static ui.Constants.INCONSISTENT_DATA_STORAGE;
+import static ui.Constants.MISSING_STUDY_AREA_DATA;
 
 /**
  * This class loads all the required information of Study Areas that is stored in location.txt.
@@ -23,14 +31,17 @@ public class StudyAreaLoader {
     }
 
     /**
-     * Loads url into file.
-     * @throws IllegalStudyAreaException If study area data file is missing.
+     * Loads content from location.txt and dictionary.txt.
+     * @throws IllegalStudyAreaException if file is not found.
      */
     public void loadFile() throws IllegalStudyAreaException {
         try {
             this.file = new File(this.url);
-        } catch (Exception e) {
-            throw new IllegalStudyAreaException(Ui.MISSING_STUDY_AREA_DATA);
+            Dictionary.loadDictionary();
+        }  catch (NullPointerException e) {
+            throw new IllegalStudyAreaException(MISSING_STUDY_AREA_DATA);
+        } catch (FileNotFoundException e) {
+            throw new IllegalStudyAreaException(e.getMessage());
         }
     }
 
@@ -50,7 +61,8 @@ public class StudyAreaLoader {
             String detailsOfLocation = input.nextLine();
             String[] detailsBuffer = detailsOfLocation.split(DIVIDER);
             if (detailsBuffer.length != 6) {
-                throw new IllegalStudyAreaException(Ui.INCONSISTENT_DATA_STORAGE);
+                String name = detailsBuffer[0];
+                throw new IllegalStudyAreaException(INCONSISTENT_DATA_STORAGE + "at " + name);
             }
             StudyArea studyArea = new StudyArea(detailsBuffer[0], detailsBuffer[1], detailsBuffer[2],
                     Boolean.parseBoolean(detailsBuffer[3]), Boolean.parseBoolean(detailsBuffer[4]),
@@ -59,6 +71,21 @@ public class StudyAreaLoader {
         }
         input.close();
         return buffer;
+    }
+
+    /**
+     * This method creates a new data file for locations.txt and dictionary.txt.
+     * @throws IOException if cannot create file.
+     */
+    public static void createNewStudyAreaData() throws IOException {
+        Files.createFile(Paths.get(FILE_PATH_STUDYAREAS));
+        Files.createFile(Paths.get(FILE_PATH_DICTIONARY));
+        PrintWriter dataBuffer = new PrintWriter(new File(FILE_PATH_STUDYAREAS));
+        dataBuffer.println(BackUpData.BACKUP_LOCATIONS);
+        dataBuffer.close();
+        dataBuffer = new PrintWriter(new File(FILE_PATH_DICTIONARY));
+        dataBuffer.println(BackUpData.BACKUP_DICTIONARY);
+        dataBuffer.close();
     }
 }
 

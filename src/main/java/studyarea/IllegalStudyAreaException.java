@@ -9,6 +9,4 @@ public class IllegalStudyAreaException extends Exception {
     public IllegalStudyAreaException(String message) {
         super(message);
     }
-
-
 }
