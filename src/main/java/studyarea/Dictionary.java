@@ -15,7 +15,8 @@ public class Dictionary {
     private static HashMap<String, String> dictionary = new HashMap<>();
 
     /**
-     * This method loads the dictionary mapping from dictionary.text.
+     * This method loads the dictionary mapping from dictionary.txt.
+     *
      * @throws FileNotFoundException if the file cannot be found.
      */
 

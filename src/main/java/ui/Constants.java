@@ -6,7 +6,7 @@ import java.io.File;
  * This class contains all the constants required for Ui.
  */
 public class Constants {
-    public static final String FILE_PATH_STUDYAREAS = "library" + File.separator + "locations.txt";
+    public static final String FILE_PATH_STUDY_AREAS = "library" + File.separator + "locations.txt";
     public static final String FILE_PATH_DICTIONARY = "library" + File.separator + "dictionary.txt";
     public static final String MISSING_STUDY_AREA_DATA = "locations.txt is missing";
     public static final String BYE_COMMAND = "bye";

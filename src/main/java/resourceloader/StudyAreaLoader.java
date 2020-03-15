@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 import static ui.Constants.FILE_PATH_DICTIONARY;
-import static ui.Constants.FILE_PATH_STUDYAREAS;
+import static ui.Constants.FILE_PATH_STUDY_AREAS;
 import static ui.Constants.INCONSISTENT_DATA_STORAGE;
 import static ui.Constants.MISSING_STUDY_AREA_DATA;
 
@@ -78,9 +78,9 @@ public class StudyAreaLoader {
      * @throws IOException if cannot create file.
      */
     public static void createNewStudyAreaData() throws IOException {
-        Files.createFile(Paths.get(FILE_PATH_STUDYAREAS));
+        Files.createFile(Paths.get(FILE_PATH_STUDY_AREAS));
         Files.createFile(Paths.get(FILE_PATH_DICTIONARY));
-        PrintWriter dataBuffer = new PrintWriter(new File(FILE_PATH_STUDYAREAS));
+        PrintWriter dataBuffer = new PrintWriter(new File(FILE_PATH_STUDY_AREAS));
         dataBuffer.println(BackUpData.BACKUP_LOCATIONS);
         dataBuffer.close();
         dataBuffer = new PrintWriter(new File(FILE_PATH_DICTIONARY));
