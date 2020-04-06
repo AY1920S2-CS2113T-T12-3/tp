@@ -1,6 +1,7 @@
 package command;
 
 import calendarview.TaskComparator;
+import exception.CalendarException;
 import exception.MisuseOfCalendarCommandException;
 import task.Task;
 import task.TaskList;

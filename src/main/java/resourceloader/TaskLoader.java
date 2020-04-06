@@ -142,6 +142,8 @@ public class TaskLoader {
         try {
             Files.createDirectories(fileDirectory);
             Files.createFile(Paths.get(filePath));
+            File file = new File(String.valueOf(Paths.get(filePath)));
+            final boolean b = file.setWritable(true);
             StudyAreaLoader.createNewStudyAreaData(FILE_PATH_STUDYAREAS);
             StudyAreaLoader.createNewStudyAreaData(FILE_PATH_DICTIONARY);
         } catch (IOException e) {

@@ -127,7 +127,7 @@ class EventTest {
 
     @Test
     void calendarDetails_longDescription() throws Exception {
-        assertEquals("[E] Programming workshop ",
+        assertEquals("[E] Programming worksh...",
                 new Event("Programming workshop for high school students", "2021-03-21", "09:00",
                         "17:00", "1").getCalendarTaskDetails());
     }

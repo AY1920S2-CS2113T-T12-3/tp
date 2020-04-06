@@ -107,7 +107,7 @@ class DeadlineTest {
 
     @Test
     void calendarDetails_longDescription() throws Exception {
-        assertEquals("[D][Y] Project proposal s",
+        assertEquals("[D][Y] Project proposa...",
                 new Deadline("Project proposal submission", "2021-03-21", "09:00",
                         "1", true).getCalendarTaskDetails());
     }

@@ -36,7 +36,7 @@ public class Parser {
     public static final String HELP_COMMAND = "help";
     public static final String CREATE_SCHEDULE_COMMAND = "schedule";
     public static final String DONE_COMMAND = "done";
-    public static final  String Calendar_COMMAND = "calendar";
+    public static final  String CALENDAR_COMMAND = "calendar";
 
 
     /**
@@ -88,7 +88,7 @@ public class Parser {
         case DONE_COMMAND:
             command = new DoneCommand(commandSplit,isOneWordCommand);
             break;
-        case Calendar_COMMAND:
+        case CALENDAR_COMMAND:
             command = new CalendarCommand(isOneWordCommand);
             break;
         case EMPTY_COMMAND:

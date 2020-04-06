@@ -58,6 +58,7 @@ public class Notes {
         try {
             File f = new File(Constants.NOTES_PATH);
             if (f.createNewFile()) {
+                final boolean b = f.setWritable(true);
                 System.out.println(Constants.NOTES_FILE_NOT_FOUND);
             }
             HashMap<String, ArrayList<String>> modules = new HashMap<>();
