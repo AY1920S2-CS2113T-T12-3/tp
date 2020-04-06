@@ -1,12 +1,13 @@
 package command;
 
+import calendarview.CalendarView;
 import calendarview.TaskComparator;
 import exception.CalendarException;
 import exception.MisuseOfCalendarCommandException;
 import task.Task;
 import task.TaskList;
 import ui.Ui;
-import calendarview.CalendarView;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;

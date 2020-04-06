@@ -3,16 +3,19 @@ package calendarview;
 import exception.CalendarException;
 import task.Task;
 import ui.Ui;
+
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.HashMap;
 import java.util.LinkedList;
+
 import static ui.Constants.COL;
 import static ui.Constants.COMMA;
 import static ui.Constants.DAYS;
 import static ui.Constants.DEC;
 import static ui.Constants.DIVIDER;
 import static ui.Constants.ENTER_DESIRED_MONTH;
+import static ui.Constants.INVALID_MONTH;
 import static ui.Constants.INVALID_MONTH_RANGE;
 import static ui.Constants.INVALID_YEAR;
 import static ui.Constants.JAN;
@@ -21,7 +24,6 @@ import static ui.Constants.MAX_COL;
 import static ui.Constants.MAX_LIST_SIZE;
 import static ui.Constants.MAX_ROW;
 import static ui.Constants.MULTIPLE_WHITE_SPACES;
-import static ui.Constants.INVALID_MONTH;
 import static ui.Constants.NON_INTEGER_YEAR;
 import static ui.Constants.NOW;
 import static ui.Constants.PADDING;
@@ -81,6 +83,7 @@ public class CalendarView {
     private void setLastDay() {
         this.lastDay = this.firstDay.getMonth().length(this.firstDay.isLeapYear());
     }
+
 
     /**
      * This print the days header.
@@ -185,7 +188,6 @@ public class CalendarView {
      * @throws CalendarException this is the exception thrown when user entered the month wrongly.
      */
     public void setMonth(String in) throws CalendarException {
-        int monthVal;
         try {
             int inMonth = Integer.parseInt(in);
             if (inMonth < JAN || inMonth > DEC) {

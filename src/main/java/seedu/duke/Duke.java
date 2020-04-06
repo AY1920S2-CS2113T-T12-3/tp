@@ -119,7 +119,6 @@ public class Duke {
     /**
      * This method runs the program.
      */
-
     public void run() {
         ui.printWelcomeMessage();
         LOGGER.log(Level.INFO, Constants.APPLICATION_STARTED_EXECUTION);
