@@ -3,6 +3,7 @@
 # change to script directory
 cd "${0%/*}"
 
+
 cd ..
 ./gradlew shadowJar
 
