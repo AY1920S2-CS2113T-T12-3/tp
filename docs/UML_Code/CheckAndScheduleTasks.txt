@@ -1,0 +1,48 @@
+@startuml
+
+
+mainframe sd Check and Schedule tasks if feasible 
+
+participant "taskScheduler :TaskScheduler" as b
+
+activate b
+
+participant "taskToBeScheduledNext :SchedulableTask" as c
+
+loop Task Queue is non-empty and schedule is feasible till current state
+
+create c
+b->c : SchedulableTask taskToBeScheduledNext = taskQueue.poll()
+activate c
+
+c-->b
+deactivate c
+
+opt Task with earliest deadline can be scheduled
+
+b->b : addTaskToList(ui,currentDay,startDate,\nstartOfDay,endOfDay,defaultPriority,\nscheduleCreated,taskToBeScheduledNext)
+activate b
+
+b-->b
+deactivate b
+
+else Task with earliest deadline can't be scheduled
+
+b->b : scheduleNotFeasible()
+activate b
+
+b-->b
+deactivate b
+
+end
+
+
+b->c !!: delete
+
+end
+
+deactivate b
+
+hide footbox
+
+@enduml

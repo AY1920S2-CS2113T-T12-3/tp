@@ -1,0 +1,95 @@
+@startuml
+
+
+Actor User
+
+
+participant " :Duke" as t
+
+User -> t: "schedule x"
+
+loop Command entered isn't "bye"
+
+participant " parser:Parser" as p
+
+participant "command:CreateScheduleCommand" as a
+
+activate t
+
+t->p : parseCommand(fullCommand)
+activate p
+
+create a
+p->a: CreateScheduleCommand(isOneWordCommand, commandSplit)
+activate a
+
+
+participant "taskScheduler :TaskScheduler" as b
+
+
+create b
+a->b : TaskScheduler(numberOfTasksToSchedule)
+activate b
+
+b-->a
+deactivate b
+
+a-->p : command
+deactivate a
+
+p-->t : command
+deactivate p
+
+t->a: executeCommand(taskList, ui)
+activate a
+
+a->b : getTasks(ui)
+activate b
+
+ref over b
+Get information regarding
+the tasks from the user
+end ref
+
+b-->a
+deactivate b
+
+a->b: scheduleTasks(ui)
+activate b 
+
+ref over b
+Check and Schedule 
+tasks if feasible
+end ref
+
+b-->a: isFeasible
+deactivate b
+
+opt Feasible schedule exists
+
+a->b : addScheduleToList(taskList, ui)
+activate b
+
+ref over b
+Add the scheduled tasks 
+to current list of tasks
+end ref
+
+b-->a
+deactivate b
+
+end
+
+a-->t
+deactivate a
+
+t->a !!:delete
+
+end
+
+t-->User
+deactivate t
+
+hide footbox 
+
+@enduml

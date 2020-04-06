@@ -193,25 +193,6 @@ public class StudyAreaList {
     }
 
     /**
-     * Checks if search key is found in Study Area's Name and Faculty attributes.
-     *
-     * @param name This is the Study Area's Name Attribute.
-     * @param address This is the Study Area's Address Attribute.
-     * @param faculty This is the Study Area's Faculty Attribute.
-     * @param key This is the search key entered by User.
-     * @return True if can be found in either case. False if not found in both cases.
-     */
-    public static boolean containsKey(String name, String address, String faculty, String key) {
-        if (name.contains(key) || name.contains(Dictionary.parseKey(key))) {
-            return true;
-        }
-        if (address.contains(key) || address.contains(Dictionary.parseKey(key))) {
-            return true;
-        }
-        return faculty.contains((key)) || faculty.contains(Dictionary.parseKey(key));
-    }
-
-    /**
      * This method checks if study area is available based on the current flag.
      * @param flag This is the current flag.
      * @param isAvail This is the current incremental availability status of the StudyArea based on previous flags.
@@ -237,12 +218,10 @@ public class StudyAreaList {
                 isAvail = !studyArea.isIndoor();
                 break;
             case SIZE_FLAG:  // allows user to find by capacity <= MaxPax
-                isAvail = Integer.parseInt(flags[1]) <= studyArea.getMaxPax();
+                isAvail = studyArea.isSizeCapable(flags[1]);
                 break;
             default:      // toLowerCase() so casing does not affect matching
-                isAvail = containsKey(studyArea.getName().toLowerCase(),
-                        studyArea.getAddress().toLowerCase(),
-                        studyArea.getFaculty().toLowerCase(), flags[4].toLowerCase());
+                isAvail = studyArea.containsSearchKey(flags[4].toLowerCase());
                 break;
             }
         }

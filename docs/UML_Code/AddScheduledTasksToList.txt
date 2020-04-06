@@ -1,0 +1,22 @@
+@startuml
+
+
+mainframe sd Add the scheduled tasks to current list of tasks
+
+participant "taskScheduler :TaskScheduler" as b
+
+activate b
+
+participant "taskList :TaskList" as c
+
+b->c: tasks.addAll(toBeAddedToList)
+activate c
+
+c-->b
+deactivate c
+
+deactivate b
+
+hide footbox
+
+@enduml

@@ -1,0 +1,40 @@
+@startuml
+
+mainframe sd Get information regarding the tasks from the user
+
+participant "taskScheduler :TaskScheduler" as b
+
+activate b
+
+participant "newSchedulableTask :SchedulableTask" as c
+
+loop Number of tasks specified by user
+
+create c
+b->c : SchedulableTask()
+activate c
+
+c-->b
+deactivate c
+
+b->c : setDetails(splitDetails)
+activate c
+
+c-->b
+deactivate c
+
+b->b : addTaskToQueue(newSchedulableTask)
+activate b
+
+b-->b:
+deactivate b
+
+b->c !!: delete
+
+end
+
+deactivate b
+
+hide footbox
+
+@enduml

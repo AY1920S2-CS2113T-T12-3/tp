@@ -19,4 +19,6 @@ public abstract class Task {
     public abstract String getTaskInformation();
 
     public abstract long numberOfDaysLeft();
+
+    public abstract String getCalendarTaskDetails();
 }

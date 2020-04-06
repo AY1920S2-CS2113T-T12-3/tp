@@ -1,5 +1,6 @@
 package task;
 
+import exception.command.DescriptionContainsInvalidCharacterException;
 import exception.command.EmptyDescriptionException;
 import exception.command.EventStartTimeAfterEndTimeException;
 import exception.command.InvalidDateException;
@@ -18,16 +19,15 @@ import java.time.format.DateTimeParseException;
 import java.time.temporal.ChronoUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import static ui.Constants.ENTER_NEW_DESCRIPTION_MESSAGE;
+import static ui.Constants.SPACE;
 
 //@@author GanapathySanathBalaji
 /**
  * Represents an event and contains the related functions.
  */
 public class Event extends Task {
-;
-    public static final String EMPTY_STRING = "";
+
     public static final String EMPTY_DESCRIPTION_MESSAGE = "New description entered by user while editing "
             + "the task is empty";
     private String description;
@@ -157,11 +157,15 @@ public class Event extends Task {
      * Parses the description from the string entered by user for the description field.
      *
      * @param description String entered by user for the description field.
-     * @throws EmptyDescriptionException If the description of the task provided is empty.
+     * @throws Exception If the description of the task provided is invalid.
      */
-    private void parseDescription(String description) throws EmptyDescriptionException {
-        if (description.trim().equals(Event.EMPTY_STRING)) {
+    private void parseDescription(String description) throws Exception {
+
+        if (description.isBlank()) {
             throw new EmptyDescriptionException();
+        }
+        if (description.contains(Character.toString('/')) || description.contains(Character.toString('#'))) {
+            throw new DescriptionContainsInvalidCharacterException();
         }
         this.description = description;
     }
@@ -186,6 +190,22 @@ public class Event extends Task {
     @Override
     public long numberOfDaysLeft() {
         return ChronoUnit.DAYS.between(LocalDate.now(),this.date);
+    }
+
+    @Override
+    public String getCalendarTaskDetails() {
+        String details = Constants.EVENT_SYMBOL + this.description;
+        if (details.length() > 25) {
+            details = details.substring(0, 22);
+            details = details + "...";
+        } else {
+            StringBuilder detailsBuilder = new StringBuilder(details);
+            while (detailsBuilder.length() < 25) {
+                detailsBuilder.append(SPACE);
+            }
+            details = detailsBuilder.toString();
+        }
+        return details;
     }
 
     /**
@@ -218,7 +238,7 @@ public class Event extends Task {
             LOGGER.log(Level.INFO, Constants.SEARCH_KEYWORD_EMPTY);
             throw new SearchKeywordEmptyException();
         }
-        boolean containsKeyword = description.contains(keyword);
+        boolean containsKeyword = description.toLowerCase().contains(keyword.toLowerCase());
         return containsKeyword;
     }
 
@@ -399,7 +419,7 @@ public class Event extends Task {
             exceptionEncountered = false;
             try {
                 fieldToBeEdited = Integer.parseInt(ui.getUserIn());
-                boolean isInvalidOption = fieldToBeEdited > 5 || fieldToBeEdited < 0;
+                boolean isInvalidOption = fieldToBeEdited > 5 || fieldToBeEdited <= 0;
                 if (isInvalidOption) {
                     throw new Exception();
                 }
@@ -420,7 +440,6 @@ public class Event extends Task {
     private void printUpdatedDetails(Ui ui) {
         ui.printMessage(Constants.UPDATED_DETAILS);
         ui.printMessage(this.getTaskInformation());
-        ui.printLine();
     }
 
     /**

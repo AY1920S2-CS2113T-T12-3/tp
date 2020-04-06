@@ -1,7 +1,6 @@
 package command;
 
 import exception.command.MisuseOfViewCommandException;
-import studyarea.StudyAreaList;
 import task.TaskList;
 import ui.Ui;
 
@@ -22,11 +21,6 @@ public class ViewCommand extends Command {
         if (!isOneWordCommand) {
             throw new MisuseOfViewCommandException();
         }
-    }
-
-    @Override
-    public void executeCommand(StudyAreaList studyAreaList, Ui ui) {
-
     }
 
     @Override

@@ -1,0 +1,14 @@
+
+@startuml
+
+left to right direction
+
+object "__:StudyAreaList__" as sL
+object "__:Dictionary__" as d
+object "__:StudyArea__" as sA
+
+sL -> sA
+sL ..> d
+
+
+@enduml

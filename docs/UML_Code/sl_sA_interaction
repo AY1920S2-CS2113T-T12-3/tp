@@ -1,0 +1,49 @@
+@startuml
+
+
+participant ":StudyAreaCommand" as StudyAreaCommand
+participant ":StudyAreaList" as StudyAreaList
+participant ":StudyArea" as StudyArea
+
+
+StudyAreaCommand -> StudyAreaList : searchList()
+
+activate StudyAreaList
+
+  StudyAreaList -> StudyAreaList: getFlagsInfo()
+  activate StudyAreaList
+    StudyAreaList --> StudyAreaList: flags
+  deactivate StudyAreaList
+
+
+    loop every studyArea in StudyAreaList
+    StudyAreaList -> StudyAreaList: isAvailstudyArea()
+    activate StudyAreaList
+      alt ports_flag
+        StudyAreaList -> StudyArea : hasPorts()
+        activate StudyArea
+        deactivate StudyArea
+      else indoor_flag
+        StudyAreaList -> StudyArea : isIndoor()
+        activate StudyArea
+       deactivate StudyArea
+      else outdoor_flag
+        StudyAreaList -> StudyArea : isIndoor()
+        activate StudyArea
+        deactivate StudyArea
+      else size_flag
+        StudyAreaList -> StudyArea : getMaxPax()
+        activate StudyArea
+        deactivate StudyArea
+      end
+    StudyAreaList --> StudyAreaList: isAvail
+    deactivate StudyAreaList
+    opt isAvail
+      StudyAreaList -> StudyAreaList: availStudyArea.add(studyArea)
+    end
+  end
+
+StudyAreaList --> StudyAreaCommand: availStudyAreas
+deactivate StudyAreaList
+
+@enduml

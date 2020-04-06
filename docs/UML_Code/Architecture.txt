@@ -1,0 +1,42 @@
+@startuml
+
+actor User
+rectangle OrgaNice! {
+agent Parser
+agent Duke
+agent Command
+agent ResourceLoader
+agent Task
+agent Ui
+agent Exception
+agent StudyArea
+}
+
+storage Storage [
+Local Storage
+]
+
+User <-right-> (Ui)
+Parser -down-> (Command)
+
+Duke -down-> (ResourceLoader)
+Duke -right-> (Parser)
+Command -right-> (Exception)
+Command -right-> (Task)
+
+Command -left-> (Ui)
+Task -left-> (Ui)
+ResourceLoader -left-> (Ui)
+StudyArea -left-> (Ui)
+
+ResourceLoader -right-> (Exception)
+StudyArea -down-> (Exception)
+
+ResourceLoader -down-> (StudyArea)
+Command -right-> (StudyArea)
+
+ResourceLoader -down-> (Task)
+ResourceLoader -right-> (Storage)
+
+
+@enduml

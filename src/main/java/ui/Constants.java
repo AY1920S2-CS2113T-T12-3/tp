@@ -49,18 +49,21 @@ public class Constants {
     public static final String EMPTY_LOCATION = "Location entered is empty! Please type a location to search for "
             + "StudyAreas!";
     public static final String NON_POSITIVE_INTEGER = "Integer entered cannot be zero or negative!";
-    public static final String HELP_DESCRIPTION_21 = TAB + "*All timing should follow 24 hour clock";
-    public static final String HELP_DESCRIPTION_20 = TAB + "*All dates should follow YYYY-MM-DD format";
-    public static final String HELP_DESCRIPTION_19 = TAB + "Notes:";
-    public static final String HELP_DESCRIPTION_18 = TAB + "study ------------------------------------- Enter Study "
+    public static final String HELP_DESCRIPTION_23 = TAB + "*All timing should follow 24 hour clock";
+    public static final String HELP_DESCRIPTION_22 = TAB + "*All dates should follow YYYY-MM-DD format";
+    public static final String HELP_DESCRIPTION_21 = TAB + "Notes:";
+    public static final String HELP_DESCRIPTION_20 = TAB + "notes ------------------------------------- Enter Notes";
+    public static final String HELP_DESCRIPTION_19 = TAB + "study ------------------------------------- Enter Study "
             + "Area search interface";
-    public static final String HELP_DESCRIPTION_17 = TAB + "bye --------------------------------------- Terminate task"
+    public static final String HELP_DESCRIPTION_18 = TAB + "bye --------------------------------------- Terminate task"
             + " interface";
-    public static final String HELP_DESCRIPTION_16 = TAB + "help -------------------------------------- View List Of "
+    public static final String HELP_DESCRIPTION_17 = TAB + "help -------------------------------------- View List Of "
             + "Commands Supported";
-    public static final String HELP_DESCRIPTION_15 = TAB + "schedule <number of task to be scheduled> - Schedule tasks";
-    public static final String HELP_DESCRIPTION_14 = TAB + "edit <index number of task> --------------- Edit the task";
-    public static final String HELP_DESCRIPTION_13 = TAB + "delete <index number of task> ------------- Delete the "
+    public static final String HELP_DESCRIPTION_16 = TAB + "schedule <number of task to be scheduled> - Schedule tasks";
+    public static final String HELP_DESCRIPTION_15 = TAB + "done <index of task> ---------------------- Mark the "
+            + "deadline as done";
+    public static final String HELP_DESCRIPTION_14 = TAB + "edit <index of task> ---------------------- Edit the task";
+    public static final String HELP_DESCRIPTION_13 = TAB + "delete <index of task> -------------------- Delete the "
             + "task";
     public static final String HELP_DESCRIPTION_12 = TAB + "search <keyword found in task> ------------ View existing "
             + "task that contains the keyword";
@@ -158,8 +161,8 @@ public class Constants {
     public static final String NEW_TASK_ADDED_MESSAGE = "A new task with the following information has been added.";
     public static final String TASK_LIST_AS_FOLLOWS = "Here is the list of tasks added so far:";
     public static final String CLOSING_BRACKET = ") ";
-    public static final String LIST_EMPTY_MESSAGE = "The list is empty.";
-    public static final String TASK_AT_INDEX_DELETED_MESSAGE = "The task at the mentioned index has been deleted";
+    public static final String SEARCH_EMPTY_MESSAGE = "No matched tasks found.";
+    public static final String TASK_AT_INDEX_DELETED_MESSAGE = "Noted! I have removed this task:";
     public static final String INDEX_TO_BE_DELETED_OUT_OF_BOUNDS_LOG = "Index specified to be deleted is out of bounds";
     public static final String RE_ENTER_VALID_INDEX_TO_DELETE_MESSAGE = "Invalid index entered. Please enter a valid"
             + " index to be deleted";
@@ -167,9 +170,12 @@ public class Constants {
             + "edited successfully";
     public static final String RE_ENTER_VALID_INDEX_TO_EDIT_MESSAGE = "Invalid index entered. Please enter a"
             + " valid index to be edited";
+    public static final String RE_ENTER_VALID_INDEX_TO_MARK_AS_DONE_MESSAGE = "Invalid index entered. Please enter a"
+            + " valid index to be marked as done";
+    public static final String DEADLINE_MARKED_AS_DONE = "Nice! I've marked this deadline as done!";
     public static final String INVALID_TASK_TYPE_LOG = "Task type of the task to be edited not recognized";
     public static final String ERROR_ENCOUNTERED_DURING_EXECUTION_MESSAGE = "Error encountered during execution";
-    public static final String TASK_LIST_CLEARED_MESSAGE = "The list of tasks is cleared.";
+    public static final String TASK_LIST_CLEARED_MESSAGE = "The list of tasks is cleared";
     public static final String LIST_SORTED_BY_PRIORITY_MESSAGE = "Here is the list of tasks added so far displayed "
             + "in decreasing order of priority:";
     public static final String LIST_SORTED_ON_DAYS_LEFT_MESSAGE = "Here is the list of tasks with sorted based"
@@ -239,4 +245,56 @@ public class Constants {
     public static final String TASK_MODE = "Application transitioning to task mode";
     public static final String APPLICATION_CLOSED_SUCCESSFULLY = "Application closed successfully";
     public static final String SHORT_DESCRIPTION = "Description of location is too short!";
+    public static final String STUDY_AREA_COMMAND = "study";
+    public static final String TASK_S_IN_YOUR_LIST = " task(s) in your list";
+    public static final String NOW_YOU_HAVE = "Now you have ";
+    public static final String SEARCH_LIST_MESSAGE = "The list of tasks containing the mentioned keyword in their"
+            + " description are as follows:";
+
+
+
+    public static final String NOTES_COMMAND = "notes";
+    public static final String NOTES_WELCOME_MESSAGE = "Welcome to OrgaNice's Notes!\n"
+            + "Notes are stored based on modules.\n"
+            + "To get started: add a module, enter a module and start adding notes!";
+    public static final String ADD_MODULE_MESSAGE = "[add modulecode] to add a module";
+    public static final String REMOVE_MODULE_MESSAGE = "[remove modulecode] to add a module";
+    public static final String ENTER_MODULE_MESSAGE = "[enter modulecode] to enter notes for its notes";
+    public static final String LIST_MODULE_MESSAGE = "[list] to list modules";
+    public static final String EXIT_MODULE_MESSAGE = "[exit] to go back to OrgaNice main page";
+    public static final String HELP_MODULE_MESSAGE = "[help] to list all the commands again";
+    public static final String INVALID_NOTES_COMMAND_MESSAGE = "Please enter a valid command.";
+
+    public static final String LINE_BREAK = "______________________________";
+
+    public static final String NOTES_PATH = "library/notes.txt";
+    public static final String NOTES_FILE_NOT_FOUND = "No notes are created as of now. All notes will automatically"
+            + "be saved.";
+    public static final String DIVIDER = "-----------------------------------------------------------------------"
+            + "---------------------------------------------------------------------------------------------------"
+            + "---------------------------";
+    public static final String[] DAYS = {"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};
+    public static final String SPACES = "                       ";
+    public static final String COL = "|";
+    public static final String PADDING = "    ";
+    public static final String PADDING1 = "                        ";
+    public static final String PADDING2 = "   ";
+    public static final String PADDING3 = "  ";
+    public static final int MAX_COL = 7;
+    public static final int MAX_ROW = 5;
+    public static final int JAN = 1;
+    public static final int DEC = 12;
+    public static final int MAX_LIST_SIZE = 4;
+    public static final String ENTER_DESIRED_MONTH = "Enter the month and year that you wish to see: ";
+    public static final String NON_INTEGER_YEAR = "Input entered for Year is not an integer. Please re-enter the year";
+    public static final String INVALID_YEAR = "Invalid Year";
+    public static final String INVALID_MONTH_RANGE = "Invalid Month range used. Must be within 1 - 12";
+    public static final String INVALID_MONTH = "Input entered for month is not an integer. Please re-enter the month";
+    public static final String TASKS_FOR = "Tasks for: ";
+    public static final String COMMA = ", ";
+    public static final String MAP_CANNOT_BE_EMPTY = "Map cannot be empty";
+    public static final String NOW = "now";
+    public static final String YES = "[Y]";
+    public static final String NO = "[N]";
+    public static final String LIST_EMPTY_MESSAGE = "List of tasks is empty";
 }

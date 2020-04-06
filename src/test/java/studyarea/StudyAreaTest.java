@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+//@@author terrytay
 class StudyAreaTest {
 
     StudyArea location1 = new StudyArea("mac commons", "utown", "nil", true, true,

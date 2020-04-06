@@ -2,17 +2,20 @@ package parser;
 
 import command.AddDeadlineCommand;
 import command.AddEventCommand;
+import command.CalendarCommand;
 import command.ClearCommand;
 import command.Command;
 import command.CountdownCommand;
 import command.CreateScheduleCommand;
 import command.DeleteCommand;
+import command.DoneCommand;
 import command.EditCommand;
 import command.HelpCommand;
 import command.PriorityViewCommand;
 import command.SearchCommand;
-import command.StudyAreaCommand;
 import command.ViewCommand;
+
+import static ui.Constants.MULTIPLE_WHITE_SPACES;
 
 //@@author GanapathySanathBalaji
 /**
@@ -32,7 +35,9 @@ public class Parser {
     public static final String EMPTY_COMMAND = "";
     public static final String HELP_COMMAND = "help";
     public static final String CREATE_SCHEDULE_COMMAND = "schedule";
-    public static final String STUDY_AREA_COMMAND = "study";
+    public static final String DONE_COMMAND = "done";
+    public static final  String CALENDAR_COMMAND = "calendar";
+
 
     /**
      * This method takes in the user input parses it and returns the command to be executed.
@@ -42,7 +47,7 @@ public class Parser {
      */
     public Command parseCommand(String fullCommand) throws Exception {
 
-        String[] commandSplit = fullCommand.split(" ",2);
+        String[] commandSplit = fullCommand.split(MULTIPLE_WHITE_SPACES,2);
         String commandType = commandSplit[0];
         Command command;
         boolean isOneWordCommand = commandSplit.length == 1 || commandSplit[1].isBlank();
@@ -80,12 +85,15 @@ public class Parser {
         case CREATE_SCHEDULE_COMMAND:
             command = new CreateScheduleCommand(isOneWordCommand, commandSplit);
             break;
+        case DONE_COMMAND:
+            command = new DoneCommand(commandSplit,isOneWordCommand);
+            break;
+        case CALENDAR_COMMAND:
+            command = new CalendarCommand(isOneWordCommand);
+            break;
         case EMPTY_COMMAND:
             throw new Exception("Empty Line entered, Please enter a valid line");
             // Break statement can't be reached if added
-        case STUDY_AREA_COMMAND:
-            command = new StudyAreaCommand();
-            break;
         default:
             throw new Exception("Invalid command entered, Please enter a valid command");
             // Break statement can't be reached if added

@@ -4,7 +4,7 @@ import exception.IllegalStudyAreaException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-
+//@@author terrytay
 class StudyAreaListTest {
     /**
      * An exception pertaining to duplicate flag should be raised if the string at flag[index] is not null.

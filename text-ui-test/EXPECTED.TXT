@@ -8,10 +8,7 @@ ______\//\\\______/\\\___\/\\\___\///____\///////\\\____/\\\\\\\\\\___\/\\\_\//\
 ________\///\\\__/\\\_____\/\\\___________/\\_____\\\___/\\\/////\\\___\/\\\__\//\\\\\\__\/\\\__\//\\\_________\//\\///////_______\///_______
 ____________\///\\\\\/______\/\\\__________\//\\\\\\\\___\//\\\\\\\\/\\_\/\\\___\//\\\\\__\/\\\___\///\\\\\\\\___\//\\\\\\\\\\______/\\\_____
 ______________\/////________\///____________\////////_____\////////\//___\///_____\/////___\///______\////////_____\//////////______\///_____
-What is your name?
 ________________________________________________________________________________________________
-________________________________________________________________________________________________
-	 Hello James Gosling!
 	 Welcome to OrgaNice! Below would be a list of commands useful for you!
 	 OrgaNice! Supports the following commands
 	 Please enter the keywords followed by the information shown in the brackets
@@ -24,44 +21,52 @@ ________________________________________________________________________________
 	 countdown --------------------------------- View existing tasks based on days left
 	 clear ------------------------------------- Delete all tasks
 	 search <keyword found in task> ------------ View existing task that contains the keyword
-	 delete <index number of task> ------------- Delete the task
-	 edit <index number of task> --------------- Edit the task
+	 delete <index of task> -------------------- Delete the task
+	 edit <index of task> ---------------------- Edit the task
+	 done <index of task> ---------------------- Mark the deadline as done
 	 schedule <number of task to be scheduled> - Schedule tasks
 	 help -------------------------------------- View List Of Commands Supported
 	 bye --------------------------------------- Terminate task interface
 	 study ------------------------------------- Enter Study Area search interface
+	 notes ------------------------------------- Enter Notes
 	 Notes:
 	 *All dates should follow YYYY-MM-DD format
 	 *All timing should follow 24 hour clock
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
-	 The list of tasks is cleared.
+	 Invalid command entered, Please enter a valid command
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 The list of tasks is cleared
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
 	 A new task with the following information has been added.
-	 [E] meeting at May 5 2020 from 12:00 to 13:00 with
+	 [E] meeting at May 5 2021 from 12:00 to 13:00 with
 	 priority 1
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
 	 Here is the list of tasks added so far:
-	 1) [E] meeting at May 5 2020 from 12:00 to 13:00 with
+	 1) [E] meeting at May 5 2021 from 12:00 to 13:00 with
 	 priority 1
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
 	 A new task with the following information has been added.
-	 [D] assignment on May 2 2020 at 14:00 with priority 2
+	 [D][PENDING] assignment is due on May 2 2021 at 14:00 with
+	 priority 2
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
 	 Here is the list of tasks added so far displayed in
 	 decreasing order of priority:
-	 1) [D] assignment on May 2 2020 at 14:00 with priority 2
-	 2) [E] meeting at May 5 2020 from 12:00 to 13:00 with
+	 1) [D][PENDING] assignment is due on May 2 2021 at 14:00
+	 with priority 2
+	 2) [E] meeting at May 5 2021 from 12:00 to 13:00 with
 	 priority 1
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
 	 Here is the list of tasks added so far:
-	 1) [D] assignment on May 2 2020 at 14:00 with priority 2
-	 2) [E] meeting at May 5 2020 from 12:00 to 13:00 with
+	 1) [D][PENDING] assignment is due on May 2 2021 at 14:00
+	 with priority 2
+	 2) [E] meeting at May 5 2021 from 12:00 to 13:00 with
 	 priority 1
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
@@ -70,10 +75,21 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________
 	 Empty Line entered, Please enter a valid line
 ________________________________________________________________________________________________
-	 1) [E] meeting at May 5 2020 from 12:00 to 13:00 with
+________________________________________________________________________________________________
+	 Task of event type cannot be marked as done
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 The list of tasks containing the mentioned keyword in
+	 their description are as follows:
+	 1) [E] meeting at May 5 2021 from 12:00 to 13:00 with
 	 priority 1
 ________________________________________________________________________________________________
-	 The list is empty.
+________________________________________________________________________________________________
+	 Invalid index entered. Please enter a valid index to be
+	 deleted
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 No matched tasks found.
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
 	 Invalid index entered. Please enter a valid index to be
@@ -85,19 +101,27 @@ ________________________________________________________________________________
 	 time> /p <priority of event>
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
-	 Enter a valid integer index (1-based) to delete/edit the
-	 corresponding event (format: delete/edit index)
+	 Enter a valid integer index (1-based) to delete/edit/done
+	 the corresponding event (format: delete/edit/done index)
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
 	 Here is the list of tasks added so far:
-	 1) [D] assignment on May 2 2020 at 14:00 with priority 2
-	 2) [E] meeting at May 5 2020 from 12:00 to 13:00 with
+	 1) [D][PENDING] assignment is due on May 2 2021 at 14:00
+	 with priority 2
+	 2) [E] meeting at May 5 2021 from 12:00 to 13:00 with
 	 priority 1
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
+	 Invalid index entered. Please enter a valid index to be
+	 edited
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Invalid index entered. Please enter a valid index to be
+	 deleted
+________________________________________________________________________________________________
 ________________________________________________________________________________________________
 	 The event details are as follows:
-	 [E] meeting at May 5 2020 from 12:00 to 13:00 with
+	 [E] meeting at May 5 2021 from 12:00 to 13:00 with
 	 priority 1
 	 Which field of the event to edit? (Enter Corresponding
 	 Number)
@@ -111,23 +135,46 @@ ________________________________________________________________________________
 	 Please enter a valid number from the list
 	 Enter new description:
 	 Updated Details:
-	 [E] team meeting at May 5 2020 from 12:00 to 13:00 with
+	 [E] team meeting at May 5 2021 from 12:00 to 13:00 with
 	 priority 1
-________________________________________________________________________________________________
 ________________________________________________________________________________________________
 	 The task at the mentioned index has been edited
 	 successfully
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
 	 Here is the list of tasks added so far:
-	 1) [D] assignment on May 2 2020 at 14:00 with priority 2
-	 2) [E] team meeting at May 5 2020 from 12:00 to 13:00 with
+	 1) [D][PENDING] assignment is due on May 2 2021 at 14:00
+	 with priority 2
+	 2) [E] team meeting at May 5 2021 from 12:00 to 13:00 with
 	 priority 1
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
+	 OrgaNice! Supports the following commands
+	 Please enter the keywords followed by the information shown in the brackets
+	 event <event details> /d <date> /s <start time> /e <end time> /p <priority of event>
+	 ------------------------------------------- Create a new event
+	 deadline <deadline details> /d <date> /t <due time> /p <priority of deadline>
+	 ------------------------------------------- Create a new deadline
+	 view -------------------------------------- View existing events
+	 priority_view ----------------------------- View existing tasks based on priority
+	 countdown --------------------------------- View existing tasks based on days left
+	 clear ------------------------------------- Delete all tasks
+	 search <keyword found in task> ------------ View existing task that contains the keyword
+	 delete <index of task> -------------------- Delete the task
+	 edit <index of task> ---------------------- Edit the task
+	 done <index of task> ---------------------- Mark the deadline as done
+	 schedule <number of task to be scheduled> - Schedule tasks
+	 help -------------------------------------- View List Of Commands Supported
+	 bye --------------------------------------- Terminate task interface
+	 study ------------------------------------- Enter Study Area search interface
+	 notes ------------------------------------- Enter Notes
+	 Notes:
+	 *All dates should follow YYYY-MM-DD format
+	 *All timing should follow 24 hour clock
+________________________________________________________________________________________________
 ________________________________________________________________________________________________
 	 The event details are as follows:
-	 [E] team meeting at May 5 2020 from 12:00 to 13:00 with
+	 [E] team meeting at May 5 2021 from 12:00 to 13:00 with
 	 priority 1
 	 Which field of the event to edit? (Enter Corresponding
 	 Number)
@@ -144,26 +191,26 @@ ________________________________________________________________________________
 	 [E] team meeting at Jun 6 2020 from 12:00 to 13:00 with
 	 priority 1
 ________________________________________________________________________________________________
-________________________________________________________________________________________________
 	 The task at the mentioned index has been edited
 	 successfully
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
-________________________________________________________________________________________________
 	 The deadline details are as follows:
-	 [D] assignment on May 2 2020 at 14:00 with priority 2
+	 [D][PENDING] assignment is due on May 2 2021 at 14:00 with
+	 priority 2
 	 Which field of the deadline to edit? (Enter Corresponding
 	 Number)
 	 1. Description
 	 2. Date
 	 3. Due Time
 	 4. Priority
+	 5. Completion Status
 
 	 Please enter a valid number from the list
 	 Enter new description:
 	 Updated Details:
-	 [D] assignment on May 2 2020 at 14:00 with priority 2
-________________________________________________________________________________________________
+	 [D][PENDING] assignment is due on May 2 2021 at 14:00 with
+	 priority 2
 ________________________________________________________________________________________________
 	 The task at the mentioned index has been edited
 	 successfully
@@ -175,7 +222,580 @@ ________________________________________________________________________________
 	 Wrong command used to view events (Should be :view )
 ________________________________________________________________________________________________
 ________________________________________________________________________________________________
-	 Invalid command entered, Please enter a valid command
+	 Task of event type cannot be marked as done
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Invalid index entered. Please enter a valid index to be
+	 marked as done
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Invalid index entered. Please enter a valid index to be
+	 marked as done
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Wrong command used to view countdown of events (Should be
+	 :countdown )
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Please enter the location for your desired study area.
+	 Enter "help" for a list of supported flags. Flags should
+	 only come after location, if a criteria for location is
+	 entered. When you are done with the search, enter "bye".
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Location entered is empty! Please type a location to
+	 search for StudyAreas!
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here is a list of supported flags!
+	 -p for study areas with ports
+	 -i for study areas that are indoors
+	 -o for study areas that are outdoors
+	 -s {size} for maximum number of pax
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here are the available study areas!
+	 __________________________________________________________
+	 Name: Opposite Town Green (Outside Starbucks)
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Starbucks
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: MacCommons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: PC Commons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Ian and Peony Ferguson Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 3
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: The Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here are the available study areas!
+	 __________________________________________________________
+	 Name: OCBC
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 2
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: SuperSnacks
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here are the available study areas!
+	 __________________________________________________________
+	 Name: Opposite Town Green (Outside Starbucks)
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Starbucks
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Duplicate flags entered!
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Duplicate flags entered!
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here are the available study areas!
+	 __________________________________________________________
+	 Name: Starbucks
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: MacCommons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: PC Commons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Ian and Peony Ferguson Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 3
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: The Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Town Plaza Seminar Rooms Waiting Lounge
+	 Address: 2 College Ave West, Town Plaza, Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: SuperSnacks
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 1
+	 Address: 9 Engineering Drive 1,EA, Level 1
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 2
+	 Address: 9 Engineering Drive 1,EA, Level 2
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 3
+	 Address: 9 Engineering Drive 1,EA, Level 3
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 6
+	 Address: 9 Engineering Drive 1,EA, Level 6, EA06-23
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Central Library
+	 Address: Central Library 12 Kent Ridge Crescent
+	 Faculty: -
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: YIH Study Room
+	 Address: Yusof Ishak House, Level 2
+	 Faculty: -
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here are the available study areas!
+	 __________________________________________________________
+	 Name: Opposite Town Green (Outside Starbucks)
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Starbucks
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: MacCommons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: PC Commons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Ian and Peony Ferguson Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 3
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: The Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Town Plaza Seminar Rooms Waiting Lounge
+	 Address: 2 College Ave West, Town Plaza, Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: OCBC
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 2
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: SuperSnacks
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 1
+	 Address: 9 Engineering Drive 1,EA, Level 1
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 2
+	 Address: 9 Engineering Drive 1,EA, Level 2
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 3
+	 Address: 9 Engineering Drive 1,EA, Level 3
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 4
+	 Address: 9 Engineering Drive 1,EA, Level 4, Outside Staff
+	 Offices
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 6
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 5
+	 Address: 9 Engineering Drive 1,EA, Level 5, Outside of the
+	 door beside EA05
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 6
+	 Address: 9 Engineering Drive 1,EA, Level 6, EA06-23
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Central Library
+	 Address: Central Library 12 Kent Ridge Crescent
+	 Faculty: -
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: YIH Study Room
+	 Address: Yusof Ishak House, Level 2
+	 Faculty: -
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Max Size is not indicated. Please indicate accordingly!
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Argument used after size flag "-s" is not an integer
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Oops! Based on your criteria we were not able to find a
+	 compatible study area!
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Here are the available study areas!
+	 __________________________________________________________
+	 Name: Opposite Town Green (Outside Starbucks)
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Starbucks
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Ground Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: MacCommons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: PC Commons
+	 Address: 2 College Avenue West Education Resource Centre,
+	 Level 1
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Ian and Peony Ferguson Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 3
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: The Study
+	 Address: 2 College Ave West Education Resource Centre,
+	 Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Town Plaza Seminar Rooms Waiting Lounge
+	 Address: 2 College Ave West, Town Plaza, Level 2
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: OCBC
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 2
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: SuperSnacks
+	 Address: 2 College Ave West, Stephen Riady Centre, Ground
+	 Level
+	 Faculty: Utown
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 1
+	 Address: 9 Engineering Drive 1,EA, Level 1
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 2
+	 Address: 9 Engineering Drive 1,EA, Level 2
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 3
+	 Address: 9 Engineering Drive 1,EA, Level 3
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 4
+	 Address: 9 Engineering Drive 1,EA, Level 4, Outside Staff
+	 Offices
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 6
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 5
+	 Address: 9 Engineering Drive 1,EA, Level 5, Outside of the
+	 door beside EA05
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: false
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: EA Level 6
+	 Address: 9 Engineering Drive 1,EA, Level 6, EA06-23
+	 Faculty: Engineering
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: Central Library
+	 Address: Central Library 12 Kent Ridge Crescent
+	 Faculty: -
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 5
+	 __________________________________________________________
+	 __________________________________________________________
+	 Name: YIH Study Room
+	 Address: Yusof Ishak House, Level 2
+	 Faculty: -
+	 Port: true
+	 Indoor: true
+	 Maximum number of Pax: 4
+	 __________________________________________________________
+	 Please enter the location for your desired study area.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Please enter the flag along with "-"
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Flags indicated are wrongly used. Please enter "help" for
+	 the supported flags!
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+	 Thank you for using our study area search service!
+________________________________________________________________________________________________
 ________________________________________________________________________________________________
 	   Goodbye! Hope to see you again!
 	 ``````````````````````````````````````````````````````````

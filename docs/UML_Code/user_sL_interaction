@@ -1,0 +1,61 @@
+@startuml
+
+mainframe sd Interaction between StudyAreaCommand and study area package's submodules          qw   aa..
+
+
+participant ":StudyAreaCommand" as StudyAreaCommand
+box "study area package\n" #white
+participant ":StudyAreaList" as StudyAreaList
+participant ":StudyArea" as StudyArea
+end box
+
+StudyAreaCommand -> StudyAreaList : searchList()
+
+activate StudyAreaList
+
+  StudyAreaList -> StudyAreaList: getFlagsInfo()
+  activate StudyAreaList
+    StudyAreaList --> StudyAreaList: flags
+  deactivate StudyAreaList
+
+
+    loop every studyArea in StudyAreaList
+    StudyAreaList -> StudyAreaList: isAvailStudyArea()
+    activate StudyAreaList
+      alt ports_flag
+        StudyAreaList -> StudyArea : hasPorts()
+        activate StudyArea
+        StudyArea --> StudyAreaList : isAvail
+        deactivate StudyArea
+      else indoor_flag
+        StudyAreaList -> StudyArea : isIndoor()
+        activate StudyArea
+        StudyArea --> StudyAreaList : isAvail
+       deactivate StudyArea
+      else outdoor_flag
+        StudyAreaList -> StudyArea : isIndoor()
+        activate StudyArea
+        StudyArea --> StudyAreaList : isAvail
+        deactivate StudyArea
+      else size_flag
+        StudyAreaList -> StudyArea : isSizeCapable()
+        activate StudyArea
+        StudyArea --> StudyAreaList : isAvail
+        deactivate StudyArea
+      else default
+        StudyAreaList -> StudyArea : containsSearchKey()
+        activate StudyArea
+        StudyArea --> StudyAreaList : isAvail
+        deactivate StudyArea
+      end
+    StudyAreaList --> StudyAreaList: isAvail
+    deactivate StudyAreaList
+    opt isAvail
+      StudyAreaList -> StudyAreaList: availStudyAreas.add(studyArea)
+    end
+  end
+
+StudyAreaList --> StudyAreaCommand: availStudyAreas
+deactivate StudyAreaList
+
+@enduml

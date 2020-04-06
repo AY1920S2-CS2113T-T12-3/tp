@@ -14,3 +14,11 @@ src/main/resources/docs/
 bin/
 
 /text-ui-test/ACTUAL.txt
+dukeLogger.log
+text-ui-test/library/dictionary.txt
+text-ui-test/library/locations.txt
+text-ui-test/library/taskList.txt
+library/dictionary.txt
+library/locations.txt
+library/notes.txt
+library/taskList.txt

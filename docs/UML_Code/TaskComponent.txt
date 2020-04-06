@@ -1,0 +1,27 @@
+@startuml
+
+agent "{abstract}\nTask" as Task
+agent TaskList
+agent "Deadline" as Deadline
+agent "Event" as Event
+agent TaskScheduler
+agent SchedulableTask
+agent TaskComparator
+agent "<<enumeration>>\nTaskType" as enTask
+
+Task <|-- Deadline
+Task <|-- Event
+TaskList -down-> Task
+
+Task -left-> enTask
+Event .up.> enTask
+Deadline .up.> enTask
+
+TaskScheduler -left-> Task
+TaskScheduler .down.> TaskComparator
+TaskComparator .down.> SchedulableTask
+TaskScheduler -right-> SchedulableTask
+TaskScheduler .up.> TaskList
+TaskScheduler .down.> Event
+
+@enduml

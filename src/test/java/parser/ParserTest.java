@@ -136,8 +136,8 @@ class ParserTest {
             command = parser.parseCommand("delete one");
             fail("Invalid delete command not identified");
         } catch (Exception exception) {
-            assertEquals("Enter a valid integer index (1-based) to delete/edit the corresponding event "
-                            + "(format: delete/edit index)",
+            assertEquals("Enter a valid integer index (1-based) to delete/edit/done the corresponding event "
+                            + "(format: delete/edit/done index)",
                     exception.getMessage());
         }
     }

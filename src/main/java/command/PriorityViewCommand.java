@@ -1,7 +1,6 @@
 package command;
 
 import exception.command.MisuseOfPriorityCommandException;
-import studyarea.StudyAreaList;
 import task.TaskList;
 import ui.Ui;
 
@@ -24,10 +23,6 @@ public class PriorityViewCommand extends Command {
         }
     }
 
-    @Override
-    public void executeCommand(StudyAreaList studyAreaList, Ui ui) {
-
-    }
 
     @Override
     public void executeCommand(TaskList taskList, Ui ui) {

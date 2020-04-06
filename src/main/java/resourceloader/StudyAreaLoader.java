@@ -1,7 +1,7 @@
 package resourceloader;
 
-import studyarea.Dictionary;
 import exception.IllegalStudyAreaException;
+import studyarea.Dictionary;
 import studyarea.StudyArea;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,7 +11,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import static ui.Constants.FILE_PATH_STUDYAREAS;
 import static ui.Constants.INCONSISTENT_DATA_STORAGE;
 import static ui.Constants.MISSING_STUDY_AREA_DATA;
@@ -19,17 +18,19 @@ import static ui.Constants.MISSING_STUDY_AREA_DATA;
 /**
  * This class loads all the required information of Study Areas that is stored in location.txt.
  */
-
+//@@author terrytay
 public class StudyAreaLoader {
     private static final String DIVIDER = "~";
     private String url;
     private File file;
 
+    //@@author terrytay
     public StudyAreaLoader(String url) throws IllegalStudyAreaException {
         this.url = url;
         loadFile();
     }
 
+    //@@author terrytay
     /**
      * Loads content from location.txt and dictionary.txt.
      * @throws IllegalStudyAreaException if file is not found.
@@ -45,6 +46,7 @@ public class StudyAreaLoader {
         }
     }
 
+    //@@author terrytay
     /**
      * Return the imported study area file as an ArrayList for the main controller
      * to add it to its database.
