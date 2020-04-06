@@ -519,7 +519,8 @@ public class Deadline extends Task {
         String isDoneString = isDone ? YES : NO;
         String details = DEADLINE_SYMBOL + isDoneString  + SPACE +  this.description;
         if (details.length() > 25) {
-            details = details.substring(0, 25);
+            details = details.substring(0, 22);
+            details = details + "...";
         } else {
             StringBuilder detailsBuilder = new StringBuilder(details);
             while (detailsBuilder.length() < 25) {

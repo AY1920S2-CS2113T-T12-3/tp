@@ -196,7 +196,8 @@ public class Event extends Task {
     public String getCalendarTaskDetails() {
         String details = Constants.EVENT_SYMBOL + this.description;
         if (details.length() > 25) {
-            details = details.substring(0, 25);
+            details = details.substring(0, 22);
+            details = details + "...";
         } else {
             StringBuilder detailsBuilder = new StringBuilder(details);
             while (detailsBuilder.length() < 25) {

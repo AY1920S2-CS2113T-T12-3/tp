@@ -178,10 +178,6 @@ Inside Notes component, there exists these classes:
 	
 5. Parser : Class to parse commands for command-based operations.
 
-
-
- 
- 
 ## 3. Implementation
 
 ### 3.1. Scheduling Tasks 
@@ -298,18 +294,60 @@ meets User's Criteria
     
 - Alternative 2 : 
     
-    Create adjacency lists based on Study Area attributes. If the Study Area contains that attribute, the 
-Study Area is added in that specific attribute list. The creation and initialisation of attribute lists are done when
-the software is setting up. For example : Locations -> Study Area. Therefore, each attribute has its own list. Based on
-user criteria, concatenate the output list with the Study Areas in the related attribute list. If more than one 
-requirement is entered by the user, only the Study Areas appears in all the related attributes specified by the User 
-will be added to the output list.
-    - Pros : Data is categorised base on attributes
-    - Cons : More memory is required as more data structures are used. Since methods invoked during the search are also 
-    linear, time taken to complete the search will be longer if more data are present. Overall, this approach is harder 
-    to implement.
-  
-Therefore, the first alternative is chosen, as it is easier to implement and lesser memory is used while 
+There exists four flags : port availability, indoor, outdoor, capacity.
+Create adjacency lists that maps the flag to the Study Area itself. If the Study Area contains that 
+attribute, the Study Area is added in that specific attribute list. Depending on the type of attribute, the adjacency
+list can be implemented using different data structure.
+
+For example, let's take only the two study areas as the entire data set.
+      
+             __________________________________________________________
+             Name: Opposite Town Green (Outside Starbucks)
+             Address: 2 College Avenue West Education Resource Centre,
+             Ground Level
+             Faculty: Utown
+             Port: true
+             Indoor: false
+             Maximum number of Pax: 4
+             __________________________________________________________
+             __________________________________________________________
+             Name: Starbucks
+             Address: 2 College Avenue West Education Resource Centre,
+             Ground Level
+             Faculty: Utown
+             Port: true
+             Indoor: true
+             Maximum number of Pax: 5
+             __________________________________________________________
+             Please enter the location for your desired study area.
+
+     
+         
+This will result in the following adjacency lists : 
+Environment: <br>
+Indoor -> {Starbucks} <br>
+Outdoor -> {Opposite Town Green (Outside Starbucks)} <br>
+*Data Structure* : 2D Array, with only two rows (For indoors and outdoors)<br>
+Ports: <br>
+Yes -> {Opposite Town Green (Outside Starbucks), Starbucks}<br>
+No -> null<br>
+*Data Structure* : 2D Array, with only two rows (For Yes and No)<br>
+Capacity: 
+4 -> {Opposite Town Green (Outside Starbucks)}
+5 -> {Starbucks}
+*Data Structure* : HashMap<Integer, ArrayList<String>> 
+
+The creation and initialisation of the lists are done when the software is setting up.  Therefore, each flag 
+has its own list. Based on user criteria, concatenate an output list with the Study Areas that are found in all
+of the relevant flag lists stated by the user. If more than one requirement is entered by the user, only the Study 
+Areas appears in all the related attributes specified by the User will be added to the output list.
+
+- Pros : Data is categorised based on flags.
+- Cons : More memory is required as more data structures are used. Since methods invoked during the search are also 
+linear, time taken to complete the search will be longer if more data are present. Overall, this approach is harder 
+to implement.
+
+Therefore, the first alternative is chosen, as it is much easier to implement and lesser memory is used while 
 conducting the search.
 
 [comment]: # (@@author terrytay)
@@ -386,8 +424,21 @@ meets your needs and is conducive, should you urgently need one.
  |v2.0|user|redo a removed notes|increase my efficiency|
  |v2.0|user|create a schedule based on requirements|customise my tasks accordingly|
 
+[comment]: # (@@NizarMohd) 
 ## Appendix C: Non-Functional Requirements    
-  {Give non-functional requirements}    
+  
+  * Environment Requirement :  
+    * Java 8 or above
+    * Should work in both 32-bits and 64-bits environment
+    * Command Line Interface
+    * Should work without internet access <br>
+  * Quality Requirement :
+    * Usage should be intuitive, and easy to use even by a novice. <br>
+  * Performance Requirement :
+    * Should respond quickly, buffer time of 2 seconds at most.<br>
+  * Reliability Requirement: 
+    * Data for Study Areas should be up to date and accurate.<br>
+   
     
 [comment]: # (@@author NizarMohd)
 ## Appendix D: Glossary    
@@ -411,6 +462,7 @@ meets your needs and is conducive, should you urgently need one.
  * *outdoor_flag* - refers to "-o" flag
  * *size_flag* - refers to "-s" flag
 
+[comment]: # (@@NizarMohd)
 ## Appendix E: Instructions for Manual Testing    
  __NOTE__: These tests are not exhaustive and testers have to do more exploratory testing to ensure the accuracy of the 
  software's features.
@@ -419,8 +471,11 @@ meets your needs and is conducive, should you urgently need one.
 
 #### Search by location, name, address 
  * To test for accuracy of loose search, test "bux" to see if it returns locations related to Starbucks.
+ 
 #### Search by flags only 
  * To test for accuracy of flags, test either "-p", "-i", "-o" or "-s {integer}"
+ 
+ 
 #### Search with both, (1) location, name or address , and , (2) flags 
  * To test for accuracy, test "{location/name/address} {flags}".
  * Since flags must come as a second argument in this case, test for "{flags} {location/name/address}"
