@@ -84,6 +84,8 @@ public class StudyAreaLoader {
 
     public static void createNewStudyAreaData(String filePath) throws IOException {
         Files.createFile(Paths.get(filePath));
+        File file = new File(String.valueOf(Paths.get(filePath)));
+        final boolean b = file.setWritable(true);
         PrintWriter dataBuffer = new PrintWriter(new File(filePath));
         if (filePath.equals(FILE_PATH_STUDYAREAS)) {
             dataBuffer.println(BackUpData.BACKUP_LOCATIONS);
