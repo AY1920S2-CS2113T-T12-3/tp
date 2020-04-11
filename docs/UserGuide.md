@@ -104,7 +104,6 @@ a.backlink:active {
    
  The application can add, edit and delete tasks. It also provides methods to search for tasks. Additionally, it has the ability to store data to a physical location on the computer, so that the tasks always remain in memory.  
     
-
 <a name="quick-start"></a>
 
 ## 2. Quick Start
